@@ -6,7 +6,11 @@ public class AlleghenyTollBooth implements TollBooth {
 	public AlleghenyTollBooth() {
 		
 	}
-
+	
+	/**
+	 * returns cost of toll for truck t
+	 * @param t
+	 */
 	@Override
 	public int calculateToll(Truck t) {
 		int truckTotal;
@@ -16,7 +20,9 @@ public class AlleghenyTollBooth implements TollBooth {
 		System.out.println(truckTotal);
 		return truckTotal;
 	}
-
+	/**
+	 * returns the current data
+	 */
 	@Override
 	public int[] displayData() {
 		System.out.println("Trucks: "+ totalNumTrucks + " Receipts: " + totalReceipts);
@@ -26,7 +32,9 @@ public class AlleghenyTollBooth implements TollBooth {
 		return intArray;
 		
 	}
-
+	/**
+	 * resets the current data and returns it
+	 */
 	@Override
 	public int[] reset() {
 		this.displayData();
