@@ -10,7 +10,12 @@ public class SongsDatabase {
 	private Map<String, Set<String>> map = new HashMap<String, Set<String>>();
 
 
-	/* Add a song title to a genre */
+	
+	/**
+	 *  Add a song title to a genre 
+	 * @param genre
+	 * @param songTitle
+	 */
 	public void addSong(String genre, String songTitle) {
 			if (map.containsKey(genre) ==false) {
 				Set<String> temp = new HashSet<String>();
@@ -23,12 +28,22 @@ public class SongsDatabase {
 		}
 
 
-	/* Return the Set that contains all songs for a genre */
+
+	/**
+	 * Return the Set that contains all songs for a genre
+	 * @param genre
+	 * @return
+	 */
 	public Set<String> getSongs(String genre) {
 			return map.get(genre);
 	}
 
-	/* Return genre, i.e., jazz, given a song title */
+	
+	/**
+	 * Return genre, i.e., jazz, given a song title
+	 * @param songTitle
+	 * @return
+	 */
 	public String getGenreOfSong(String songTitle) {
 			Set<String> temp = new HashSet<String>();
 			for (Set<String> i : map.values()) {
@@ -44,7 +59,10 @@ public class SongsDatabase {
 			return "Does Not Exsist";
 	}
 
-
+	/**
+	 * returns length of map
+	 * @return
+	 */
 	public int size() {
 		return map.size();
 	}
